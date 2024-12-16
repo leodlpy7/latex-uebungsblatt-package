@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{uebungsblatt}
+\usepackage{lipsum}
+\begin{document}
+    % set all parameters for the exercise sheet
+    \setUebungsblattParams[
+        name=John Doe, % your name
+        matrikelnr=1234567, % your matriculation number
+        dozent=Jenny Doe, % your lecturer
+        modul=Anatomy, % your lecture
+        university=Universidad de los muertos, % your university
+        semester=Wintersemester 2024/25, % the semester
+        semestershort=WiSe 24/25, % the abbreviation of the semester
+        uebungsblattnr=1, % the exercise sheet number
+        aufgabennr=0 % the exercise number to start the exercise sheet,
+        % because of implementation details, you have to subtract one
+    ]{}
+    % build the style of the exercise sheet
+    \makeUebungsblattStyle{}
+
+    % now begin with the exercises
+    % the first parameter is the exercise name, the second the points you can get
+    \begin{exercise}{Exercise Name}{10}
+        \lipsum[1]
+        % you can define subtasks ...
+        \begin{subtasks}
+            % ... with the subtasks written down in their own environment
+            \begin{subtask}{3}
+                \lipsum[1]
+            \end{subtask}
+            \begin{subtask}{3}
+                \lipsum[1]
+            \end{subtask}
+        \end{subtasks}
+    \end{exercise}
+    % and of course you can give the solution of the exercise
+    \begin{solution}
+        % with all subtasks like above
+        \begin{subtasks}
+            \begin{subtask}{}
+                \lipsum[1]
+            \end{subtask}
+            \begin{subtask}{}
+                \lipsum[1]
+            \end{subtask}
+        \end{subtasks}
+    \end{solution}
+\end{document}
